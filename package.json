@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-inventory-monitor",
+  "version": "1.0.0",
+  "description": "Monitor module for nodejs-inventory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomanjarres/nodejs-inventory-monitor.git"
+  },
+  "keywords": [
+    "nodejs",
+    "inventory",
+    "monitor"
+  ],
+  "author": "Diego Manjarres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegomanjarres/nodejs-inventory-monitor/issues"
+  },
+  "homepage": "https://github.com/diegomanjarres/nodejs-inventory-monitor#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "gaussian": "^1.1.0",
+    "mongoose": "^5.0.1",
+    "nodejs-inventory": "^1.3.6"
+  }
+}
