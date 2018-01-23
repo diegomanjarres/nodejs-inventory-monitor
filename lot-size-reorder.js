@@ -7,7 +7,7 @@ function check(transaction, params) {
 
   const { Qn, Rn } = lotSizeReorder(params)
   // console.log(Qn,Rn);
-  const { item, date } = transaction
+  const { item, date, user } = transaction
   const millisInDay = 1000 * 60 * 60 * 24
   this.Inventory.orders
     .getItemsActiveOrders(null, [item], date)
@@ -28,6 +28,7 @@ function check(transaction, params) {
         const expectedDate = new Date(date.getTime() + millisInDay * params.leadTime)
         let restockTransaction = factory.createTransaction(item, Math.floor(Qn), expectedDate)
         let order = {
+          user,
           orderCost: params.setupCost,
           issueDate: date,
           transaction: restockTransaction
